@@ -13,7 +13,7 @@ COPY *.go ./
 RUN go build -o /demo-gitops-api
 
 ## Deploy
-FROM gcr.io/distroless/base-debian10 AS final
+FROM gcr.io/distroless/base-debian10:nonroot AS final
 
 WORKDIR /
 
